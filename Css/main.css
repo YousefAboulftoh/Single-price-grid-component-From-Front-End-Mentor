@@ -1,0 +1,154 @@
+/* Start Global Rules */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+:root {
+    --main-raduis: 10px;
+    --main-padding: 25px;
+    --mobile--padding: 15px
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+
+/* End Global Rules */
+
+.header {
+    background-color: hsl(204, 43%, 93%);
+    height: 100vh;
+}
+
+.head {
+    background-color: white;
+}
+
+.head h1 {
+    color: hsl(179, 62%, 43%);
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.head .first {
+    color: hsl(71, 73%, 54%);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.head p:last-child {
+    color: hsl(218, 22%, 67%);
+    margin-bottom: 15px;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.last .mon {
+    background-color: hsl(179, 62%, 43%);
+}
+
+.last .mon h1 {
+    font-size: 15px;
+    color: white;
+    margin: 5px 0 15px;
+}
+
+.last .mon h2 {
+    color: white;
+}
+
+.last .mon h2 span {
+    font-size: 15px;
+    margin-left: 10px;
+    color: hsl(204, 43%, 93%, 0.6);
+}
+
+.last .mon p {
+    padding-top: 10px;
+    color: hsl(204, 43%, 93%);
+}
+
+.last .mon a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    background-color: hsl(71, 73%, 54%);
+    margin-top: 25px;
+    margin-bottom: 10px;
+    padding: 13px 0px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.last .why {
+    background-color: hsl(179, 62%, 43%, 0.7);
+}
+
+.last .why h1 {
+    color: white;
+    margin-bottom: 25px;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.last .why ul {
+    color: hsl(204, 43%, 93%, 0.6);
+    margin-bottom: 5px;
+}
+
+.last .why ul li {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+@media (min-width:992px) {
+    .header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .content {
+        width: 640px;
+    }
+    .last {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    }
+    .head,
+    .mon,
+    .why {
+        padding: var(--main-padding);
+    }
+}
+
+@media (min-width:375px) and (max-width:991px) {
+    .header {
+        height: 100vh;
+    }
+    .content {
+        padding: 35px;
+    }
+    .head {
+        border-top-left-radius: var(--main-raduis);
+        border-top-right-radius: var(--main-raduis);
+    }
+    .why {
+        border-bottom-left-radius: var(--main-raduis);
+        border-bottom-right-radius: var(--main-raduis);
+    }
+    .head,
+    .mon,
+    .why {
+        padding: var(--mobile--padding);
+    }
+}
